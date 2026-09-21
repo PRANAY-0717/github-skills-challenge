@@ -37,6 +37,7 @@ jobs:
             --cov-fail-under=80
 
       - name: Publish coverage comment
+        if: always()
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
           GITHUB_TOKEN: ${{ github.token }}
